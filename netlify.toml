@@ -1,10 +1,9 @@
 [build]
-  command = "pnpm build"
+  command = "npm run build"
   publish = ".next"
 
-[build.environment]
-  NODE_VERSION = "18"
-  NEXT_PRIVATE_TARGET = "server"
+[functions]
+  directory = "netlify/functions"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/next"
