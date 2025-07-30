@@ -14,8 +14,13 @@ import "./App.css"
 function App() {
   return (
     <ThemeProvider>
+<<<<<<< HEAD
       <div className="App">
         <div className="main-wrapper bg-background">
+=======
+      <div className="App min-h-screen w-full bg-background">
+        <div className="flex min-h-screen flex-col w-full bg-background">
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
           <Header />
           <main className="flex-1 w-full bg-background">
             <Hero />

@@ -71,7 +71,11 @@ const Hero = () => {
 
   return (
     <section className="w-full py-12 md:py-20 lg:py-32 xl:py-40 overflow-hidden bg-background">
+<<<<<<< HEAD
       <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6 relative">
+=======
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 relative">
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
         <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
 
         <motion.div
@@ -80,7 +84,11 @@ const Hero = () => {
           animate="visible"
           className="text-center max-w-4xl mx-auto mb-8 md:mb-16"
         >
+<<<<<<< HEAD
           <motion.div variants={itemVariants} className="flex justify-center">
+=======
+          <motion.div variants={itemVariants}>
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
             <span className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-secondary text-secondary-foreground mb-4 md:mb-6">
               Launching Soon
             </span>
@@ -95,16 +103,24 @@ const Hero = () => {
 
           <motion.p
             variants={itemVariants}
+<<<<<<< HEAD
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto"
+=======
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto px-4"
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
           >
             The all-in-one platform that helps teams collaborate, automate, and deliver exceptional results. Streamline
             your processes and focus on what matters most.
           </motion.p>
 
+<<<<<<< HEAD
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center"
           >
+=======
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
             <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
               <button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full h-11 md:h-12 px-6 md:px-8 text-sm md:text-base w-full sm:w-auto flex items-center justify-center gap-2 transition-colors">
                 Start Free Trial
@@ -120,7 +136,11 @@ const Hero = () => {
 
           <motion.div
             variants={itemVariants}
+<<<<<<< HEAD
             className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-4 md:mt-6 text-xs sm:text-sm text-muted-foreground"
+=======
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-4 md:mt-6 text-xs sm:text-sm text-muted-foreground px-4"
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
           >
             <div className="flex items-center gap-1">
               <Check className="size-3 md:size-4 text-primary" />

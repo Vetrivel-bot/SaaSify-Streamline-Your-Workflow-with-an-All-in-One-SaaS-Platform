@@ -63,6 +63,7 @@ const FAQ = () => {
   }
 
   return (
+<<<<<<< HEAD
     <section id="faq" className="w-full py-16 md:py-24 lg:py-32 flex justify-center">
       <div className="section-content">
         <div className="container px-4 md:px-6 mx-auto max-w-7xl">
@@ -133,6 +134,76 @@ const FAQ = () => {
               ))}
             </motion.div>
           </div>
+=======
+    <section id="faq" className="w-full py-16 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center justify-center space-y-4 text-center mb-12 md:mb-16"
+        >
+          <motion.div
+            initial={{ scale: 0, rotate: 90 }}
+            whileInView={{ scale: 1, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <span className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-secondary text-secondary-foreground">
+              FAQ
+            </span>
+          </motion.div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight px-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="max-w-[800px] text-muted-foreground text-sm sm:text-base md:text-lg px-4">
+            Find answers to common questions about our platform.
+          </p>
+        </motion.div>
+
+        <div className="mx-auto max-w-4xl">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-2"
+          >
+            {faqs.map((faq, i) => (
+              <motion.div key={i} variants={itemVariants}>
+                <motion.div whileHover={{ scale: 1.01, x: 5 }} transition={{ duration: 0.2 }}>
+                  <div className="border border-border/40 rounded-lg bg-gradient-to-r from-background to-muted/5 hover:from-muted/10 hover:to-muted/20 transition-all duration-300">
+                    <button
+                      onClick={() => setOpenItem(openItem === i ? null : i)}
+                      className="w-full px-4 md:px-6 py-4 text-left font-medium hover:no-underline text-sm md:text-base flex items-center justify-between"
+                    >
+                      {faq.question}
+                      <motion.div animate={{ rotate: openItem === i ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                        <ChevronDown className="size-4" />
+                      </motion.div>
+                    </button>
+                    <AnimatePresence>
+                      {openItem === i && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-4 md:px-6 pb-4 text-muted-foreground text-sm md:text-base leading-relaxed">
+                            {faq.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
         </div>
       </div>
     </section>

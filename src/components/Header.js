@@ -46,6 +46,7 @@ const Header = () => {
         isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"
       }`}
     >
+<<<<<<< HEAD
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[1400px] mx-auto px-4 md:px-6">
           <div className="flex h-14 md:h-16 items-center justify-between">
@@ -142,11 +143,107 @@ const Header = () => {
                 </button>
               </motion.div>
             </div>
+=======
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="flex h-14 md:h-16 items-center justify-between px-4 md:px-6">
+          {/* Rest of the header content remains the same */}
+          <motion.div
+            className="flex items-center gap-2 font-bold cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <motion.div
+              className="size-7 md:size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-sm md:text-base"
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            >
+              S
+            </motion.div>
+            <span className="text-sm md:text-base">SaaSify</span>
+          </motion.div>
+
+          <nav className="hidden lg:flex gap-6 xl:gap-8">
+            {["Features", "Testimonials", "Pricing", "FAQ"].map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <button
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground relative group"
+                >
+                  {item}
+                  <motion.div
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"
+                    whileHover={{ width: "100%" }}
+                  />
+                </button>
+              </motion.div>
+            ))}
+          </nav>
+
+          <div className="hidden md:flex gap-2 lg:gap-4 items-center">
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-muted transition-colors">
+                <motion.div
+                  key={theme}
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+                </motion.div>
+                <span className="sr-only">Toggle theme</span>
+              </button>
+            </motion.div>
+            <button className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hidden lg:block">
+              Log in
+            </button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-sm px-4 lg:px-6 h-8 md:h-9 flex items-center gap-1 transition-colors">
+                Get Started
+                <ChevronRight className="size-3 md:size-4" />
+              </button>
+            </motion.div>
+          </div>
+
+          <div className="flex items-center gap-2 md:hidden">
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-muted transition-colors">
+                {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+              </button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-full hover:bg-muted transition-colors"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={mobileMenuOpen ? "close" : "menu"}
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {mobileMenuOpen ? <X className="size-4" /> : <Menu className="size-4" />}
+                  </motion.div>
+                </AnimatePresence>
+                <span className="sr-only">Toggle menu</span>
+              </button>
+            </motion.div>
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Mobile menu - remains the same */}
+=======
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -156,7 +253,11 @@ const Header = () => {
             exit="closed"
             className="md:hidden absolute top-14 inset-x-0 bg-background/95 backdrop-blur-lg border-b shadow-lg"
           >
+<<<<<<< HEAD
             <div className="w-full max-w-[1400px] mx-auto py-4 px-4 flex flex-col gap-1">
+=======
+            <div className="w-full max-w-7xl mx-auto py-4 px-4 flex flex-col gap-1">
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
               {["Features", "Testimonials", "Pricing", "FAQ"].map((item) => (
                 <motion.div key={item} variants={menuItemVariants}>
                   <button

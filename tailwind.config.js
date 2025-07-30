@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +17,11 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+=======
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: "class",
+  theme: {
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -25,7 +31,11 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
+<<<<<<< HEAD
           foreground: "hsl(var(--foreground))",
+=======
+          foreground: "hsl(var(--primary-foreground))",
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -54,6 +64,7 @@ module.exports = {
       },
       borderRadius: {
         lg: "var(--radius)",
+<<<<<<< HEAD
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
@@ -74,4 +85,12 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+=======
+        md: "calc(var(--radius) - 0.25rem)",
+        sm: "calc(var(--radius) - 0.5rem)",
+      },
+    },
+  },
+  plugins: [],
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
 }

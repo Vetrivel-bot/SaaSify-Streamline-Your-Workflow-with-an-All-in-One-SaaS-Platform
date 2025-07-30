@@ -75,6 +75,7 @@
 .App {
   @apply bg-background;
   min-height: 100vh;
+<<<<<<< HEAD
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -90,11 +91,15 @@
   min-height: 100vh;
   justify-content: flex-start;
   align-items: center;
+=======
+  width: 100%;
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
 }
 
 .container {
   @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
   max-width: 1200px;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,6 +149,13 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+=======
+}
+
+/* Ensure proper background for all sections */
+section {
+  @apply w-full;
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
 }
 
 /* Custom utility classes */

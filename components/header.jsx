@@ -10,7 +10,11 @@ import { useTheme } from "next-themes"
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+<<<<<<< HEAD
   const { theme, setTheme, resolvedTheme } = useTheme()
+=======
+  const { theme, setTheme } = useTheme()
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -28,7 +32,11 @@ export default function Header() {
   }, [])
 
   const toggleTheme = () => {
+<<<<<<< HEAD
     setTheme(resolvedTheme === "dark" ? "light" : "dark")
+=======
+    setTheme(theme === "dark" ? "light" : "dark")
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
   }
 
   const menuVariants = {
@@ -59,24 +67,38 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
+<<<<<<< HEAD
       className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${
         isScrolled ? "bg-background/80 shadow-sm border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 max-w-[1600px] flex h-14 md:h-16 items-center justify-between">
+=======
+      className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
+    >
+      <div className="container flex h-14 md:h-16 items-center justify-between px-4 md:px-6">
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
         <motion.div
           className="flex items-center gap-2 font-bold"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
           <motion.div
+<<<<<<< HEAD
             className="size-7 md:size-8 rounded-lg bg-foreground flex items-center justify-center text-background text-sm md:text-base"
+=======
+            className="size-7 md:size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-sm md:text-base"
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
           >
             S
           </motion.div>
+<<<<<<< HEAD
           <span className="text-sm md:text-base text-foreground">SaaSify</span>
+=======
+          <span className="text-sm md:text-base">SaaSify</span>
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
         </motion.div>
 
         <nav className="hidden lg:flex gap-6 xl:gap-8">
@@ -93,7 +115,11 @@ export default function Header() {
               >
                 {item}
                 <motion.div
+<<<<<<< HEAD
                   className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full transition-all duration-300"
+=======
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
                   whileHover={{ width: "100%" }}
                 />
               </Link>
@@ -105,11 +131,16 @@ export default function Header() {
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full size-8 md:size-9">
               <motion.div
+<<<<<<< HEAD
                 key={mounted ? resolvedTheme : "loading"}
+=======
+                key={theme}
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
                 initial={{ rotate: -90, opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
+<<<<<<< HEAD
                 {mounted ? (
                   resolvedTheme === "dark" ? (
                     <Sun className="size-4" />
@@ -119,6 +150,9 @@ export default function Header() {
                 ) : (
                   <div className="size-4" />
                 )}
+=======
+                {mounted && theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
               </motion.div>
               <span className="sr-only">Toggle theme</span>
             </Button>
@@ -130,7 +164,11 @@ export default function Header() {
             Log in
           </Link>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+<<<<<<< HEAD
             <Button className="rounded-full text-sm px-4 lg:px-6 h-8 md:h-9 bg-foreground text-background hover:bg-foreground/90">
+=======
+            <Button className="rounded-full text-sm px-4 lg:px-6 h-8 md:h-9">
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
               Get Started
               <ChevronRight className="ml-1 size-3 md:size-4" />
             </Button>
@@ -140,6 +178,7 @@ export default function Header() {
         <div className="flex items-center gap-2 md:hidden">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full size-8">
+<<<<<<< HEAD
               {mounted ? (
                 resolvedTheme === "dark" ? (
                   <Sun className="size-4" />
@@ -149,6 +188,9 @@ export default function Header() {
               ) : (
                 <div className="size-4" />
               )}
+=======
+              {mounted && theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
             </Button>
           </motion.div>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -201,10 +243,14 @@ export default function Header() {
                 </Link>
               </motion.div>
               <motion.div variants={menuItemVariants} className="px-2">
+<<<<<<< HEAD
                 <Button
                   className="rounded-full w-full mt-2 bg-foreground text-background hover:bg-foreground/90"
                   onClick={() => setMobileMenuOpen(false)}
                 >
+=======
+                <Button className="rounded-full w-full mt-2" onClick={() => setMobileMenuOpen(false)}>
+>>>>>>> cb47be20f51742e05a368a655026f2b6ec1cafe2
                   Get Started
                   <ChevronRight className="ml-1 size-4" />
                 </Button>
