@@ -1,5 +1,3 @@
-AI Prompts
-
 You are an expert technical writer and open‑source evangelist.  
 I have a GitHub repository at:
 https://github.com/Vetrivel-bot/SaaSify-Streamline-Your-Workflow-with-an-All-in-One-SaaS-Platform
